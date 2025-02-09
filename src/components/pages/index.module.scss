@@ -27,7 +27,7 @@ main {
 
   &>img {
     height: 100%;
-    width: 40%;
+    min-width: 40%;
     object-fit: cover;
     position: relative;
     z-index: 1;

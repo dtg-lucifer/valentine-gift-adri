@@ -24,6 +24,9 @@ const Page = ({ heading, paragraph, imageName, direction }: PageProps) => {
     <motion.main
       ref={mainRef}
       className={styles.main}
+      style={{
+        flexDirection: direction === Direction.Left ? "row" : "row-reverse",
+      }}
       variants={{
         hidden: {
           opacity: 0,
@@ -58,6 +61,9 @@ const Page = ({ heading, paragraph, imageName, direction }: PageProps) => {
               duration: 0.5,
             },
           },
+        }}
+        style={{
+          textAlign: direction === Direction.Left ? "left" : "right",
         }}
       >
         <motion.h1
